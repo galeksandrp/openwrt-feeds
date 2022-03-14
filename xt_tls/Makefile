@@ -48,8 +48,8 @@ MAKE_FLAGS += KDIR=$(LINUX_DIR) ARCH=$(LINUX_KARCH) M="$(PKG_BUILD_DIR)/src"
 
 # Package install instructions; create a directory inside the package to hold our executable, and then copy the executable we built previously into the folder
 define Package/ipt-xt_tls/install
-	$(INSTALL_DIR) $(1)/usr/lib/xtables
-	$(INSTALL_BIN) $(PKG_BUILD_DIR)/ipt/libxt_tls.so $(1)/usr/lib/xtables
+	$(INSTALL_DIR) $(1)/usr/lib/iptables
+	$(INSTALL_BIN) $(PKG_BUILD_DIR)/ipt/libxt_tls.so $(1)/usr/lib/iptables
 endef
 
 # This command is always the last, it uses the definitions and variables we give above in order to get the job done
